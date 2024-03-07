@@ -4,7 +4,7 @@
     <xsl:output encoding="utf-8" method="html" doctype-system="about:legacy-doctype"/>
     
     <xsl:template match="/">
-        <xsl:variable name="entrenador" select="/club_voleibol/equipo[entrenador/nombre = 'Julio Velasco']/entrenador"/>
+        <xsl:variable name="entrenador" select="/club_voleibol/equipo[entrenador/nombre = 'Arie Selinger']/entrenador"/>
         <html lang="es">
             <head>
                 <link href="../css/estilo.css" rel="stylesheet" type="text/css" />
@@ -24,20 +24,24 @@
                            <xsl:value-of select="$entrenador/nombre"/>
                         </a>
                     </h1>
-        <article class="equipos">
-            <h4><xsl:value-of select="$entrenador/../nombre"/></h4>
-    <!-- Obtener jugadores titulares del equipo entrenado por 'NOMBRE ENTRENADOR' en variable-->
-            <xsl:for-each select="$entrenador/../jugadores/jugador[@titular='si']">
-            <p><xsl:value-of select="@camiseta"/> - <xsl:value-of select="nombre"/></p>
-            </xsl:for-each>
-        </article>
-
+                    <xsl:apply-templates select="$entrenador/../nombre"/>
                 </main>
-        <footer>
-            <address>&#169; Desarrollado por info@birt.eus</address>
-        </footer>
+                <footer>
+                    <address>&#169; Desarrollado por info@birt.eus</address>
+                </footer>
             </body>
         </html>
+    </xsl:template>
+
+    <xsl:template match="nombre">
+        <article class="equipos">
+            <h4><xsl:value-of select="."/></h4>
+            <xsl:apply-templates select="../jugadores/jugador[@titular='si']"/>
+        </article>
+    </xsl:template>
+
+    <xsl:template match="jugador">
+        <p><xsl:value-of select="@camiseta"/> - <xsl:value-of select="nombre"/></p>
     </xsl:template>
 
 </xsl:stylesheet>
