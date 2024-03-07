@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+<!--
+Módulo: Transformación de datos XML
+Tarea: LMSGI04 Tarea evaluativa 2. XSLT. (60%)
+Autor: [MOHAMED BOUTAIBI ARABI]
+Fecha: [01/03/2024]
+-->
 
     <xsl:output encoding="utf-8" method="html" doctype-system="about:legacy-doctype"/>
     
@@ -45,4 +51,5 @@
     </xsl:template>
 
 </xsl:stylesheet>
+
 

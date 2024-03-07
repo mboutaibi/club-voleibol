@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="partidos.xsl" type="text/xsl"?>
+<!--
+Módulo: Transformación de datos XML
+Tarea: LMSGI04 Tarea evaluativa 2. XSLT. (60%)
+Autor: [MOHAMED BOUTAIBI ARABI]
+Fecha: [01/03/2024]
+-->
 <club_voleibol>
 
     <!-- Información de la tienda -->
