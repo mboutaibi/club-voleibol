@@ -10,7 +10,7 @@ Fecha: [01/03/2024]
     <xsl:output encoding="utf-8" method="html" doctype-system="about:legacy-doctype"/>
     
     <xsl:template match="/">
-        <xsl:variable name="entrenador" select="/club_voleibol/equipo[entrenador/nombre = 'Arie Selinger']/entrenador"/>
+        <xsl:variable name="entrenador" select="/club_voleibol/equipo[entrenador/nombre = 'Julio Velasco']/entrenador"/>
         <html lang="es">
             <head>
                 <link href="../css/estilo.css" rel="stylesheet" type="text/css" />
